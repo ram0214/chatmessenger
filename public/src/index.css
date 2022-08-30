@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* backgroundImage: url("./bg.jpg"); */
+  
 }
 
 body,
@@ -16,10 +18,25 @@ body {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
+  background-image:
+    url("./bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  
+}
+.contact {
+  background-image:
+  url("./205.jpg"); 
+}
+
+
+.containerchat {
+  background-image: url(./bg2.jpg);
 }
 
 .Toastify__toast-theme--dark {
-  background-color: #ffffff !important;
+  background-color: black !important;
 }
 
 .mic {

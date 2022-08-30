@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/botAvatar.png";
+import "../index.css"
 
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -68,7 +69,9 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: #1ee3fc;
+  background-color: white;
+  border-right: 2px solid whitesmoke;
+  border-radius: 5px;
   .brand {
     display: flex;
     align-items: center;
@@ -78,7 +81,7 @@ const Container = styled.div`
       height: 7rem;
     }
     h3 {
-      color: white;
+      color: black;
       text-transform: uppercase;
     }
   }
@@ -88,15 +91,18 @@ const Container = styled.div`
     align-items: center;
     overflow: auto;
     gap: 0.8rem;
+    box-shadow: 5px 10px skyblue;
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
-        background-color: white;
+        background-color: skyblue;
         width: 0.1rem;
         border-radius: 1rem;
       }
     }
     .contact {
+      border: 2px solid whitesmoke;
+      border-radius: 5px;
       background-color: #ffffff34;
       min-height: 5rem;
       cursor: pointer;
@@ -104,6 +110,7 @@ const Container = styled.div`
       border-radius: 0.2rem;
       padding: 0.4rem;
       display: flex;
+      box-shadow: 5px 10px #ADD8E6;
       gap: 1rem;
       align-items: center;
       transition: 0.5s ease-in-out;
@@ -114,17 +121,19 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: black;
         }
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: black;
     }
   }
 
   .current-user {
-    background-color: #7c7cff;
+    border: 2px solid smoke;
+    border-radius: 5px;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +146,7 @@ const Container = styled.div`
     }
     .username {
       h2 {
-        color: white;
+        color: Black;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {

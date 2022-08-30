@@ -5,11 +5,20 @@ import Logout from "./Logout";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { sendMessageRoute, recieveMessageRoute } from "../utils/APIRoutes";
+const refreshRate = require("refresh-rate");
 
 export default function ChatContainer({ currentChat, socket }) {
   const [messages, setMessages] = useState([]);
   const scrollRef = useRef();
   const [arrivalMessage, setArrivalMessage] = useState(null);
+
+  (async () => {
+    console.log(await refreshRate());
+    //=> 60
+ 
+    console.log(await refreshRate({ sampleCount: 60 }));
+    //=> 60
+})();
 
   useEffect(async () => {
     const data = await JSON.parse(
@@ -109,6 +118,8 @@ export default function ChatContainer({ currentChat, socket }) {
 
 const Container = styled.div`
   display: grid;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
   grid-template-rows: 10% 80% 10%;
   gap: 0.1rem;
   overflow: hidden;
@@ -131,7 +142,7 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: black;
         }
       }
     }
@@ -159,7 +170,7 @@ const Container = styled.div`
         padding: 1rem;
         font-size: 1.1rem;
         border-radius: 1rem;
-        color: #d1d1d1;
+        color: black;
         @media screen and (min-width: 720px) and (max-width: 1080px) {
           max-width: 70%;
         }
@@ -174,7 +185,7 @@ const Container = styled.div`
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: white ;
+        background-color: #F9F6EE ;
       }
     }
   }

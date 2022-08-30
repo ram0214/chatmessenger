@@ -63,6 +63,7 @@ export default function Login() {
 
   return (
     <>
+
       <FormContainer>
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
@@ -101,7 +102,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: white;
+  // background-image: url("/src/assets/1800744.jpg");
   .brand {
     display: flex;
     align-items: center;
@@ -120,7 +121,7 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: skyblue;
+    background-image: url("public/src/assets/1800744.jpg");
     border-radius: 2rem;
     padding: 5rem;
   }
@@ -129,7 +130,7 @@ const FormContainer = styled.div`
     padding: 1rem;
     border: 0.1rem solid #4e0eff;
     border-radius: 0.4rem;
-    color: white;
+    color: black;
     width: 100%;
     font-size: 1rem;
     &:focus {

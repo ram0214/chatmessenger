@@ -6115,6 +6115,13 @@
   "resolved" "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.4.tgz"
   "version" "2.0.4"
 
+"mean-average@^1.0.0":
+  "integrity" "sha512-TNiFp0z6M9kmBSK10mZRA+Xzt9uDfZ9i+WaKn41RCiDFoKTI+cgQWZitPmjTgagdNF7HDxIxSaZko2k4oojaOw=="
+  "resolved" "https://registry.npmjs.org/mean-average/-/mean-average-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "totalled" "^1.0.0"
+
 "media-typer@0.3.0":
   "integrity" "sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g="
   "resolved" "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
@@ -7604,6 +7611,15 @@
     "indent-string" "^4.0.0"
     "strip-indent" "^3.0.0"
 
+"refresh-rate@^1.0.0":
+  "integrity" "sha512-NZodSkLFDnMbEsdAaLdfIdVLDmJokRoiYUOkawKn39qmNVU7dh+GpzUxsBEYmm6ner5luxNSRvi68absgJRMrA=="
+  "resolved" "https://registry.npmjs.org/refresh-rate/-/refresh-rate-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "mean-average" "^1.0.0"
+    "performance-now" "^2.1.0"
+    "raf" "^3.4.1"
+
 "regenerate-unicode-properties@^10.0.1":
   "integrity" "sha512-vn5DU6yg6h8hP/2OkQo3K7uVILvY4iu0oI4t3HFa81UPkhGJwkRwM10JEc3upjdhHjs/k8GJY1sRBhk5sr69Bw=="
   "resolved" "https://registry.npmjs.org/regenerate-unicode-properties/-/regenerate-unicode-properties-10.0.1.tgz"
@@ -8608,6 +8624,11 @@
   "integrity" "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA=="
   "resolved" "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz"
   "version" "1.0.1"
+
+"totalled@^1.0.0":
+  "integrity" "sha512-FDhKWt82tvUdza1Bln/mviG8jyHbrBL9kL0vgnV6GIesZKM/FKx3Rlt3nl8hew7dAnJ2RMX5eRszMsF7OHPiQQ=="
+  "resolved" "https://registry.npmjs.org/totalled/-/totalled-1.0.0.tgz"
+  "version" "1.0.0"
 
 "touch@^3.1.0":
   "integrity" "sha512-WBx8Uy5TLtOSRtIq+M03/sKDrXCLHxwDcquSP2c43Le03/9serjQBIztjRz6FkJez9D/hleyAXTBGLwwZUw9lA=="

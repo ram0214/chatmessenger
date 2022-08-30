@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Picker from "emoji-picker-react";
 import {BiMicrophone} from "react-icons/bi";
 import {GrAttachment} from "react-icons/gr";
+import {BsFillMicFill} from "react-icons/bs"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { attachment} from "@fortawesome/react-fontawesome";
 export default function ChatInput({ handleSendMsg }) {
@@ -37,10 +38,10 @@ export default function ChatInput({ handleSendMsg }) {
           <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
           {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
         </div>&nbsp;&nbsp; 
-        <div className="button-container">
-        <i><BiMicrophone/></i>
+        <div className="button-container" style={{color:"black"}}>
+        <i><BsFillMicFill/></i>
         </div>
-        <div className="GrAttachment" style={{color:"white"}}>
+        <div className="GrAttachment" style={{color:"black"}}>
         <i><GrAttachment/></i>   
         </div>
       </div>
@@ -51,7 +52,7 @@ export default function ChatInput({ handleSendMsg }) {
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
         />
-        <button type="submit">
+        <button type="submit" style={{border: "none", color:"black", fontSize:"1rem"}}>
           <IoMdSend />
         </button>
       </form>
@@ -63,7 +64,7 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
+  background-color: white;
   padding: 0 10rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -72,7 +73,7 @@ const Container = styled.div`
   }
   .GrAttachment{
   margin-left:-80px;
-  color: #FFFFFF;
+  color: skyblue;
 
   }
   .button-container {
@@ -85,7 +86,7 @@ const Container = styled.div`
       margin-left:-35px;
       svg {
         font-size: 1.5rem;
-        color: #ffff00c8;
+        color: skyblue;
         cursor: pointer;
       }
       .emoji-picker-react {
@@ -116,18 +117,20 @@ const Container = styled.div`
       }
     }
   }
+
+}
   .input-container {
     width: 100%;
     border-radius: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #ffffff34;
+    background-color: white;
     input {
       width: 90%;
       height: 60%;
       background-color: transparent;
-      color: white;
+      color: black;
       border: none;
       padding-left: 3rem;
       font-size: 1.2rem;
@@ -147,7 +150,6 @@ const Container = styled.div`
       justify-content: center;
       align-items: center;
       background-color: #9a86f3;
-      border: none;
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
         svg {

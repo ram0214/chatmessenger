@@ -7,6 +7,7 @@ import { allUsersRoute, host } from "../utils/APIRoutes";
 import ChatContainer from "../components/ChatContainer";
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
+import "../index.css"
 
 export default function Chat() {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ export default function Chat() {
   return (
     <>
       <Container>
-        <div className="container">
+        <div className="container containerchat">
           <Contacts contacts={contacts} changeChat={handleChatChange} />
           {currentChat === undefined ? (
             <Welcome />
@@ -69,11 +70,12 @@ const Container = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color:  White;
+  background-color: white;
   .container {
     height: 85vh;
     width: 85vw;
-    background-color: #00ffdd;
+    background-color: white;
+    border-radius: 2px;
     display: grid;
     grid-template-columns: 25% 75%;
     @media screen and (min-width: 720px) and (max-width: 1080px) {
