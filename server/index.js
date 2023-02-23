@@ -8,9 +8,9 @@ const http = require("http");
 const socket = require("socket.io");
 const koa = require("koa");
 
-const allowedOrigins = ['http://49.248.71.154:3000', 'http://49.248.71.154:5000'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:5000'];
 
-var whitelist = ['http://49.248.71.154:3000','http://49.248.71.154:5000']
+var whitelist = ['http://localhost:3000','http://localhost:5000']
 
 // PORT configuration
 const PORT = process.env.PORT || 5000;
@@ -58,7 +58,7 @@ app.use("/api/messages", messageRoutes);
 // );
 
 const server = app.listen(PORT, IP, ()  => {
-  console.log(`The Server is running at: http://49.248.71.154:${PORT}`);
+  console.log(`The Server is running at: http://localhost:${PORT}`);
 });
 
 
@@ -70,7 +70,7 @@ const server = app.listen(PORT, IP, ()  => {
 
 const io = socket(server, {
   cors: {
-    origin: ['http://49.248.71.154:3000'],
+    origin: ['http://localhost:3000'],
     credentials: true,
     optionsSuccessStatus: 200
   },
